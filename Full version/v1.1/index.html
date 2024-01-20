@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>knowpedia</title>
+    <link rel="icon" href="./images/Knowpedia.png" sizes="64x64">
+
+    <meta name="description" content="Welcome to knowpedia. Read essays here. Essays about different topics which may become useful to improve your knowledge...">
+    <meta name="keywords" content="knowpedia, essays, krish khare">
+    <meta name="robots" content="index, follow">
+    <meta name="creator" content="Krish Khare">
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./libraries/css/swiper-bundle.min.css"> -->
+    <meta name="google-site-verification" content="do2qVAQxC3ZBQ7PgYSSS1A6FQ528MqmsUx_Nt6KwDLY" />
+
+    <style>
+        #loader {
+            color: rgb(0, 119, 255);
+            background: white;
+            /* background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083); */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #loader_name_div_bg {
+            padding-top: 5px;
+            border-radius: 30px;
+            background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083);
+        }
+
+        #loader_name_div {
+            padding: 5px;
+            background: #fff;
+        }
+
+        #loader span {
+            font-size: 18px;
+            background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083);
+            background-clip: border-box;
+            text-shadow: 2px 3px rgba(64, 60, 67, .16);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .loader_spinner {
+            width: 30px;
+            height: 30px;
+            border: 5px solid transparent;
+            border-top-color: #5f97ff;
+            border-bottom-color: #0052ec;
+            border-radius: 50%;
+            /* position: relative; */
+            animation: loader-rotate 1s linear infinite;
+            /* top: 50%; */
+            margin-top: 17px;
+        }
+
+        /* .loader_spinner::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0052ec;
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            margin-left: -5px;
+        } */
+
+        @keyframes loader-rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<!-- <body> -->
+    <body onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off oncontextmenu="return false">
+
+    <!-- Loader- -->
+    <div id="loader">
+
+        <div id="loader_name_div_bg">
+            <div id="loader_name_div">
+                <span>knowpedia v1.1...</span>
+            </div>
+        </div>
+        <div class="loader_spinner"></div>
+
+    </div>
+
+    <!-- <div id="my_name">
+        <img src="./images/cartoon_img.jpg" alt="">
+        <span>KRISH KHARE</span>
+    </div> -->
+
+
+    <header>
+
+        <div id="my_name">
+            <img src="./images/Knowpedia.png" alt="">
+            <span>knowpedia v1.1</span>
+        </div>
+
+        <div id="nav">
+
+
+            <div class="nav_icons active_nav_icon" id="home_icon">
+
+                <?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg
+                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M1037 4780 c-233 -49 -441 -215 -547 -434 -81 -170 -75 -17 -75
+                -1786 0 -1769 -6 -1616 75 -1786 90 -187 257 -339 446 -405 133 -46 174 -49
+                734 -49 l529 0 -17 38 c-20 46 -29 374 -14 503 20 160 -44 86 973 1105 l920
+                920 -4 630 c-4 702 -1 670 -77 830 -78 163 -211 296 -374 374 -167 80 -64 74
+                -1341 77 -1078 2 -1145 1 -1228 -17z m2353 -995 c63 -60 63 -150 0 -210 l-31
+                -30 -1112 -3 c-1088 -2 -1113 -2 -1144 17 -92 57 -94 178 -4 238 l34 23 1113
+                -2 1113 -3 31 -30z m-480 -1120 c63 -60 63 -150 0 -210 l-31 -30 -872 -3
+                c-851 -2 -873 -2 -904 17 -92 57 -94 178 -4 238 l34 23 873 -2 873 -3 31 -30z
+                m-879 -1108 c21 -14 41 -41 53 -70 20 -47 20 -47 0 -94 -12 -29 -32 -56 -53
+                -70 l-34 -23 -431 0 c-410 0 -433 1 -463 20 -92 56 -94 177 -4 237 l34 23 432
+                0 432 0 34 -23z" />
+                        <path d="M4280 2748 c-28 -7 -225 -199 -928 -901 -491 -491 -905 -910 -920
+                -931 -27 -39 -27 -39 -30 -250 -4 -237 1 -259 67 -303 33 -22 42 -23 243 -23
+                157 0 217 3 241 14 42 18 1843 1821 1857 1859 14 40 13 73 -6 110 -20 38 -341
+                366 -393 401 -44 30 -85 37 -131 24z" />
+                    </g>
+                </svg>
+
+                <span>Essays</span>
+
+            </div>
+            <div class="nav_icons" id="projects_icon">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M4515 5109 c-148 -14 -334 -46 -470 -80 -66 -17 -130 -34 -142 -36
+    -27 -6 -28 -11 -7 -111 56 -276 251 -567 514 -766 138 -105 384 -210 536 -230
+    l52 -6 20 77 c70 262 96 471 96 784 l1 255 -27 41 c-44 67 -75 76 -288 79
+    -102 1 -230 -2 -285 -7z" />
+                        <path d="M3500 4841 c-687 -309 -1320 -839 -1897 -1591 -146 -191 -453 -648
+    -453 -676 0 -5 75 -84 166 -175 l166 -166 92 30 c109 35 287 48 377 27 219
+    -52 349 -224 349 -462 0 -94 -18 -200 -49 -291 l-19 -54 173 -173 c111 -111
+    178 -171 187 -167 29 11 390 248 525 343 240 172 501 386 698 574 483 459 823
+    925 1036 1415 l48 110 -107 26 c-389 97 -730 340 -963 688 -111 165 -187 336
+    -224 504 -9 42 -18 77 -19 77 0 0 -39 -18 -86 -39z m-13 -822 c263 -70 465
+    -273 534 -537 26 -97 28 -258 5 -357 -9 -38 -38 -113 -63 -165 -40 -80 -61
+    -109 -138 -185 -103 -103 -168 -145 -292 -187 -161 -56 -367 -48 -527 19 -229
+    95 -405 315 -447 557 -16 96 -7 263 21 351 120 385 520 608 907 504z" />
+                        <path d="M3226 3739 c-214 -32 -376 -223 -376 -443 0 -248 199 -446 450 -446
+    190 0 373 136 425 317 19 66 22 181 5 243 -59 220 -277 363 -504 329z" />
+                        <path d="M1055 3461 c-141 -35 -280 -99 -410 -189 -52 -36 -176 -151 -357
+    -331 -255 -255 -277 -279 -283 -318 -8 -53 7 -102 43 -137 46 -44 82 -48 191
+    -25 53 11 132 27 176 35 84 15 272 21 315 9 24 -6 30 2 100 122 143 246 303
+    490 463 706 54 74 77 111 70 118 -32 32 -197 37 -308 10z" />
+                        <path d="M897 2132 c-112 -214 -167 -331 -167 -360 0 -35 24 -84 56 -114 l29
+    -27 70 82 c39 45 129 142 202 217 l132 136 -117 117 -117 116 -88 -167z" />
+                        <path d="M1730 1995 c-47 -9 -110 -31 -170 -61 -87 -43 -106 -57 -230 -183
+    -372 -377 -730 -868 -730 -1002 0 -133 116 -187 253 -118 142 72 372 232 552
+    384 147 124 422 384 462 437 106 138 161 322 129 431 -31 106 -112 141 -266
+    112z" />
+                        <path d="M3370 1299 c-110 -84 -516 -352 -695 -458 l-169 -101 -1 -122 c0 -71
+    -11 -195 -24 -293 -28 -200 -25 -234 25 -282 40 -38 91 -50 143 -35 50 15 566
+    534 633 637 127 194 189 377 190 555 0 89 -12 151 -29 149 -5 0 -37 -23 -73
+    -50z" />
+                        <path d="M1975 1130 c-50 -50 -147 -141 -217 -203 l-127 -112 32 -34 c37 -39
+    83 -61 127 -61 28 0 282 124 467 227 l52 29 -122 122 -122 122 -90 -90z" />
+                    </g>
+                </svg>
+
+                <span>Projects</span>
+
+            </div>
+
+            <div class="nav_icons" id="contact_icon">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="297.000000pt" height="271.000000pt"
+                    viewBox="0 0 297.000000 271.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,271.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M547 2550 c-63 -16 -91 -36 -161 -112 -79 -85 -107 -130 -140 -224
+               -82 -234 -50 -467 101 -739 45 -82 201 -316 223 -335 3 -3 44 -52 91 -110 209
+               -255 462 -476 704 -613 191 -108 512 -230 694 -262 233 -43 447 21 607 181 63
+               62 85 104 113 213 28 111 28 184 1 211 -11 11 -82 50 -158 86 -75 37 -180 87
+               -232 113 -227 110 -242 108 -354 -53 -36 -50 -82 -112 -104 -136 -37 -42 -41
+               -44 -104 -48 -55 -4 -75 0 -137 26 -193 82 -385 212 -532 364 -131 135 -151
+               159 -230 276 -82 119 -103 165 -94 200 7 29 59 97 141 185 30 32 63 75 72 94
+               19 40 23 28 -98 323 -90 221 -142 331 -164 350 -22 17 -182 24 -239 10z" />
+                    </g>
+                </svg>
+                <span>Contact</span>
+
+            </div>
+        </div>
+
+        <div id="social_media_acc">
+            <a href="https://www.linkedin.com/in/krish-khare-8b1a8b274/" target="_blank" rel="noopener noreferrer">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                    style="filter: invert(43%) sepia(81%) saturate(6522%) hue-rotate(205deg) brightness(107%) contrast(102%)">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M395 5110 c-176 -28 -312 -145 -371 -320 -18 -53 -19 -130 -19 -2230
+0 -2100 1 -2177 19 -2230 49 -146 148 -247 294 -303 l57 -22 2185 0 2185 0 57
+22 c146 56 245 157 294 303 18 53 19 130 19 2230 0 2100 -1 2177 -19 2230 -49
+146 -148 247 -294 303 l-57 22 -2150 1 c-1182 1 -2172 -2 -2200 -6z m880 -565
+c207 -44 382 -218 424 -423 78 -376 -262 -724 -634 -649 -200 41 -355 175
+-421 366 -31 89 -35 228 -9 318 42 148 150 276 289 343 124 60 222 72 351 45z
+m2625 -1298 c169 -44 276 -104 383 -215 166 -170 253 -399 288 -757 9 -91 13
+-353 14 -875 0 -702 -1 -747 -18 -773 -10 -16 -32 -37 -50 -47 -30 -19 -53
+-20 -365 -20 -363 0 -370 1 -411 58 -19 28 -20 46 -24 763 -3 623 -6 744 -19
+799 -38 154 -98 254 -188 308 -78 46 -121 57 -235 56 -131 0 -192 -23 -279
+-105 -72 -67 -123 -159 -159 -287 -21 -75 -22 -97 -27 -792 -5 -668 -6 -717
+-23 -742 -38 -55 -56 -58 -404 -58 -356 0 -368 2 -405 71 -17 32 -18 92 -18
+1267 0 1368 -4 1281 64 1323 29 18 56 19 361 19 310 0 332 -1 362 -20 52 -31
+63 -64 63 -192 l1 -113 22 30 c74 102 202 206 309 253 141 61 271 82 488 78
+147 -3 190 -8 270 -29z m-2379 -30 c19 -12 42 -38 52 -57 16 -33 17 -109 15
+-1272 -3 -1233 -3 -1237 -24 -1265 -45 -61 -58 -63 -402 -63 -338 0 -341 0
+-392 55 l-25 27 -3 1250 c-2 1206 -2 1252 16 1280 11 16 32 38 48 49 27 18 51
+19 355 19 322 0 326 0 360 -23z" />
+                    </g>
+                </svg>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/_krishkhare/" target="_blank" rel="noopener noreferrer">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="48.000000pt" height="48.000000pt"
+                    viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet"
+                    style="filter: invert(28%) sepia(86%) saturate(4198%) hue-rotate(311deg) brightness(101%) contrast(104%);">
+
+                    <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M108 414 c-46 -24 -58 -61 -58 -174 0 -165 25 -190 190 -190 165 0
+               190 25 190 190 0 166 -25 190 -192 190 -71 -1 -111 -5 -130 -16z m263 -43 c28
+               -29 29 -32 29 -131 0 -99 -1 -102 -29 -131 -29 -28 -32 -29 -131 -29 -99 0
+               -102 1 -131 29 -28 29 -29 32 -29 131 0 99 1 102 29 131 29 28 32 29 131 29
+               99 0 102 -1 131 -29z" />
+                        <path d="M324 349 c-10 -17 13 -36 27 -22 12 12 4 33 -11 33 -5 0 -12 -5 -16
+               -11z" />
+                        <path d="M191 326 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124
+               -149 87z m96 -38 c29 -27 29 -65 1 -95 -27 -29 -65 -29 -95 -1 -29 27 -29 65
+               -1 95 27 29 65 29 95 1z" />
+                    </g>
+                </svg>
+                <span>Instagram</span>
+            </a>
+        </div>
+
+    </header>
+
+    <div id="smooth_scroll_to_top">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+            viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" style="rotate: 180deg;">
+
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+-1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+-971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+-1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+-77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Slider main container -->
+    <!-- <div class="page_swiper"> -->
+    <!-- Additional required wrapper -->
+    <!-- <div class="swiper-wrapper"> -->
+
+    <!-- Slides -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="home_page" class="pages active_page">
+
+        <div id="essay" class="">
+
+            <div id="essay_intro">
+                <?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg
+                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M1037 4780 c-233 -49 -441 -215 -547 -434 -81 -170 -75 -17 -75
+                -1786 0 -1769 -6 -1616 75 -1786 90 -187 257 -339 446 -405 133 -46 174 -49
+                734 -49 l529 0 -17 38 c-20 46 -29 374 -14 503 20 160 -44 86 973 1105 l920
+                920 -4 630 c-4 702 -1 670 -77 830 -78 163 -211 296 -374 374 -167 80 -64 74
+                -1341 77 -1078 2 -1145 1 -1228 -17z m2353 -995 c63 -60 63 -150 0 -210 l-31
+                -30 -1112 -3 c-1088 -2 -1113 -2 -1144 17 -92 57 -94 178 -4 238 l34 23 1113
+                -2 1113 -3 31 -30z m-480 -1120 c63 -60 63 -150 0 -210 l-31 -30 -872 -3
+                c-851 -2 -873 -2 -904 17 -92 57 -94 178 -4 238 l34 23 873 -2 873 -3 31 -30z
+                m-879 -1108 c21 -14 41 -41 53 -70 20 -47 20 -47 0 -94 -12 -29 -32 -56 -53
+                -70 l-34 -23 -431 0 c-410 0 -433 1 -463 20 -92 56 -94 177 -4 237 l34 23 432
+                0 432 0 34 -23z" />
+                        <path d="M4280 2748 c-28 -7 -225 -199 -928 -901 -491 -491 -905 -910 -920
+                -931 -27 -39 -27 -39 -30 -250 -4 -237 1 -259 67 -303 33 -22 42 -23 243 -23
+                157 0 217 3 241 14 42 18 1843 1821 1857 1859 14 40 13 73 -6 110 -20 38 -341
+                366 -393 401 -44 30 -85 37 -131 24z" />
+                    </g>
+                </svg>
+                <span>Essays</span>
+            </div>
+
+            <p>Click on essay to read</p>
+
+            <div id="essay_container">
+
+
+                <a href="./essays/our_PM.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/namo.jpg" alt=""><span class="essay_title">Our Prime
+                            Minister or <br> Mr. Narendra Modi</span><span class="essay_desc">Our Prime Minister, Narendra Damodardas Modi is the 15th Prime Minister of India. He is the leader of Bhartiya Janata Party. He remained the Chief Minister of Gujarat from 2001 to 2014.</span></div>
+                </a>
+
+                <a href="./essays/game_you_like_most.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/sports.jpg" alt=""><span class="essay_title">The Game
+                            You Like Most</span><span class="essay_desc">Games play an important role in our life. In fact, games are very essential for health and we all know that
+                                health is wealth. Sound body and sound mind go hand in hand. Games help us both physically and mentally.</span></div>
+                </a>
+
+                <a href="./essays/the_book_i_like_most.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/book.png" alt=""><span class="essay_title">The Book
+                            That I Like Most</span><span class="essay_desc">A books is a precious life blood of its master. - Milton I am very fond of reading books. I have read a good number of novel, one-act plays, short stories and poems. But the books that I like most is the 'Ramcharit Manas' of Goswami Tulsidas.</span></div>
+                </a>
+
+                <a href="./essays/science.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/science.jpg" alt=""><span class="essay_title">Is
+                            Science a Blessing or a Curse ?</span><span class="essay_desc">Science has given powers fit for gods but we use them like small children. - C.E.M. Joad Science is neither blessing nor curse. It is what man makes it. Science can be the greatest of the blessings or worst of the curses. We blame science. In fact, we should blame man.</span></div>
+                </a>
+
+                <a href="./essays/election.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/election.jpg" alt=""><span class="essay_title">An
+                            Election Scene</span><span class="essay_desc">Elections are life and soul of a democratic system of a government. In India we have democracy. Democracy is the government of the people, for the people, by the people. In a democracy, people form the kind of government they want to rule over them. Elections provide them opportunity to do so.</span></div>
+                </a>
+
+                <a href="./essays/historical_building.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/historical_building.jpg"
+                            alt=""><span class="essay_title">A Visit to a Historical building</span><span class="essay_desc">A thing of beauty is a joy for ever.-Keats. Historical places have special attraction for mankind, for they teach us while they amuse us. They present before us a past glory and an artistic sense.</span></div>
+                </a>
+
+                <a href="./essays/zoo.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/zoo.jpg" alt=""><span class="essay_title">A Visit to a
+                            Zoo</span><span class="essay_desc">A zoo is place where different kinds of living animals, beasts and birds are kept. It is a place of great interest for all, particularly for the students. By paying a visit to zoo, people living in cities can have knowledge of different species of animals, birds and reptiles in the world.</span></div>
+                </a>
+
+                <a href="./essays/national_festival.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/national_festival.jpg"
+                            alt=""><span class="essay_title">A National Festival</span><span class="essay_desc">The 15th of August, 1947 is a red-letter day in the history of India. On this day India got freedom from the English after a long struggle under the leadership of Mahatma Gandhi. Besides great leaders common people also took part in freedom struggle.</span></div>
+                </a>
+
+                <a href="./essays/afforestation.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/afforestation.png"
+                            alt=""><span class="essay_title">Afforestation and Its Importance</span><span class="essay_desc">Forests shield the soil from the sun's rays. Without trees, even the richest soil may soon become unproductive. Once the mountain slopes were covered with magnificient forests. They were cut down to provide
+                                land for mankind.</span></div>
+                </a>
+
+                <a href="./essays/sports.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/importance_of_sports.jpg"
+                            alt=""><span class="essay_title">Importance of Games and Sports</span><span class="essay_desc">The battle of Waterloo was won on the playground of Eton. - Wellington All work and no
+                                play makes Jack a dull boy goes the saying. Develepment of the body is as important as that of the mind.</span></div>
+                </a>
+
+                <a href="./essays/leader.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/leader.jpeg"
+                            alt=""><span class="essay_title">Qualities of a Good Leader</span><span class="essay_desc">India is the biggest democratic country of the world. Democracy is the government of the people, for the people and by the people. It is undoubtedly a good system of government. In a democratic state, the whole power lies in the hand of the people. They are real rulers because of their voting power.</span></div>
+                </a>
+
+                <a href="./essays/yoga.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/yoga.jpg"
+                            alt=""><span class="essay_title">International Yoga Day</span><span class="essay_desc">International Yoga Day is celebrated annually on 21 June. It was started in 2015. The idea of an International Yoga Day was first proposed by Narendra Modi. He suggested that day of 21st June to UN because it is the longest day of the year.</span></div>
+                </a>
+
+                <a href="./essays/money.html" id="PM" target="_blank">
+                    <div class="essay_items"><span>...</span><img src="./essay_images/money.jpg" alt=""><span class="essay_title">Importance
+                            of Money</span><span class="essay_desc">Time is undoubtedly money. In the past when the needs of the people were limited, barter system was in practice. People used to give what they had and they took what they needed. There was no money system or currency.</span></div>
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div id="check_prev_next_pages_parent">
+
+
+            <div class="check_projects">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M4515 5109 c-148 -14 -334 -46 -470 -80 -66 -17 -130 -34 -142 -36
+    -27 -6 -28 -11 -7 -111 56 -276 251 -567 514 -766 138 -105 384 -210 536 -230
+    l52 -6 20 77 c70 262 96 471 96 784 l1 255 -27 41 c-44 67 -75 76 -288 79
+    -102 1 -230 -2 -285 -7z" />
+                        <path d="M3500 4841 c-687 -309 -1320 -839 -1897 -1591 -146 -191 -453 -648
+    -453 -676 0 -5 75 -84 166 -175 l166 -166 92 30 c109 35 287 48 377 27 219
+    -52 349 -224 349 -462 0 -94 -18 -200 -49 -291 l-19 -54 173 -173 c111 -111
+    178 -171 187 -167 29 11 390 248 525 343 240 172 501 386 698 574 483 459 823
+    925 1036 1415 l48 110 -107 26 c-389 97 -730 340 -963 688 -111 165 -187 336
+    -224 504 -9 42 -18 77 -19 77 0 0 -39 -18 -86 -39z m-13 -822 c263 -70 465
+    -273 534 -537 26 -97 28 -258 5 -357 -9 -38 -38 -113 -63 -165 -40 -80 -61
+    -109 -138 -185 -103 -103 -168 -145 -292 -187 -161 -56 -367 -48 -527 19 -229
+    95 -405 315 -447 557 -16 96 -7 263 21 351 120 385 520 608 907 504z" />
+                        <path d="M3226 3739 c-214 -32 -376 -223 -376 -443 0 -248 199 -446 450 -446
+    190 0 373 136 425 317 19 66 22 181 5 243 -59 220 -277 363 -504 329z" />
+                        <path d="M1055 3461 c-141 -35 -280 -99 -410 -189 -52 -36 -176 -151 -357
+    -331 -255 -255 -277 -279 -283 -318 -8 -53 7 -102 43 -137 46 -44 82 -48 191
+    -25 53 11 132 27 176 35 84 15 272 21 315 9 24 -6 30 2 100 122 143 246 303
+    490 463 706 54 74 77 111 70 118 -32 32 -197 37 -308 10z" />
+                        <path d="M897 2132 c-112 -214 -167 -331 -167 -360 0 -35 24 -84 56 -114 l29
+    -27 70 82 c39 45 129 142 202 217 l132 136 -117 117 -117 116 -88 -167z" />
+                        <path d="M1730 1995 c-47 -9 -110 -31 -170 -61 -87 -43 -106 -57 -230 -183
+    -372 -377 -730 -868 -730 -1002 0 -133 116 -187 253 -118 142 72 372 232 552
+    384 147 124 422 384 462 437 106 138 161 322 129 431 -31 106 -112 141 -266
+    112z" />
+                        <path d="M3370 1299 c-110 -84 -516 -352 -695 -458 l-169 -101 -1 -122 c0 -71
+    -11 -195 -24 -293 -28 -200 -25 -234 25 -282 40 -38 91 -50 143 -35 50 15 566
+    534 633 637 127 194 189 377 190 555 0 89 -12 151 -29 149 -5 0 -37 -23 -73
+    -50z" />
+                        <path d="M1975 1130 c-50 -50 -147 -141 -217 -203 l-127 -112 32 -34 c37 -39
+    83 -61 127 -61 28 0 282 124 467 227 l52 29 -122 122 -122 122 -90 -90z" />
+                    </g>
+                </svg>
+                <span>Check all projects</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" style="rotate: 180deg;">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+-1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+-971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+-1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+-77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+
+        <br><br>
+
+    </div>
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="projects_page" class="pages">
+
+        <div id="projects_intro_bg">
+            <div id="projects_intro">
+                <div>
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M4515 5109 c-148 -14 -334 -46 -470 -80 -66 -17 -130 -34 -142 -36
+        -27 -6 -28 -11 -7 -111 56 -276 251 -567 514 -766 138 -105 384 -210 536 -230
+        l52 -6 20 77 c70 262 96 471 96 784 l1 255 -27 41 c-44 67 -75 76 -288 79
+        -102 1 -230 -2 -285 -7z" />
+                            <path d="M3500 4841 c-687 -309 -1320 -839 -1897 -1591 -146 -191 -453 -648
+        -453 -676 0 -5 75 -84 166 -175 l166 -166 92 30 c109 35 287 48 377 27 219
+        -52 349 -224 349 -462 0 -94 -18 -200 -49 -291 l-19 -54 173 -173 c111 -111
+        178 -171 187 -167 29 11 390 248 525 343 240 172 501 386 698 574 483 459 823
+        925 1036 1415 l48 110 -107 26 c-389 97 -730 340 -963 688 -111 165 -187 336
+        -224 504 -9 42 -18 77 -19 77 0 0 -39 -18 -86 -39z m-13 -822 c263 -70 465
+        -273 534 -537 26 -97 28 -258 5 -357 -9 -38 -38 -113 -63 -165 -40 -80 -61
+        -109 -138 -185 -103 -103 -168 -145 -292 -187 -161 -56 -367 -48 -527 19 -229
+        95 -405 315 -447 557 -16 96 -7 263 21 351 120 385 520 608 907 504z" />
+                            <path d="M3226 3739 c-214 -32 -376 -223 -376 -443 0 -248 199 -446 450 -446
+        190 0 373 136 425 317 19 66 22 181 5 243 -59 220 -277 363 -504 329z" />
+                            <path d="M1055 3461 c-141 -35 -280 -99 -410 -189 -52 -36 -176 -151 -357
+        -331 -255 -255 -277 -279 -283 -318 -8 -53 7 -102 43 -137 46 -44 82 -48 191
+        -25 53 11 132 27 176 35 84 15 272 21 315 9 24 -6 30 2 100 122 143 246 303
+        490 463 706 54 74 77 111 70 118 -32 32 -197 37 -308 10z" />
+                            <path d="M897 2132 c-112 -214 -167 -331 -167 -360 0 -35 24 -84 56 -114 l29
+        -27 70 82 c39 45 129 142 202 217 l132 136 -117 117 -117 116 -88 -167z" />
+                            <path d="M1730 1995 c-47 -9 -110 -31 -170 -61 -87 -43 -106 -57 -230 -183
+        -372 -377 -730 -868 -730 -1002 0 -133 116 -187 253 -118 142 72 372 232 552
+        384 147 124 422 384 462 437 106 138 161 322 129 431 -31 106 -112 141 -266
+        112z" />
+                            <path d="M3370 1299 c-110 -84 -516 -352 -695 -458 l-169 -101 -1 -122 c0 -71
+        -11 -195 -24 -293 -28 -200 -25 -234 25 -282 40 -38 91 -50 143 -35 50 15 566
+        534 633 637 127 194 189 377 190 555 0 89 -12 151 -29 149 -5 0 -37 -23 -73
+        -50z" />
+                            <path d="M1975 1130 c-50 -50 -147 -141 -217 -203 l-127 -112 32 -34 c37 -39
+        83 -61 127 -61 28 0 282 124 467 227 l52 29 -122 122 -122 122 -90 -90z" />
+                        </g>
+                    </svg>
+                    <span>My Projects</span>
+                </div>
+                <span>Some of my projects are given below -</span>
+            </div>
+        </div>
+
+        <div id="project_container">
+            <div class="projects_card"><img src="./project_images/my_portfolio.png" alt="">
+                <div class="project_card_info">
+                    <span class="project_card_title">My Portfolio</span>
+                    <span class="project_card_description">My persional portfolio site.</span>
+                    <span><a href="https://krishkhareportfolio.netlify.app" target="_blank"
+                            rel="noopener noreferrer">https://krishkhareportfolio.netlify.app</a></span>
+                </div>
+            </div>
+            <div class="projects_card"><img src="./project_images/Gamermash.png" alt="">
+                <div class="project_card_info">
+                    <span class="project_card_title">Gamermash</span>
+                    <span class="project_card_description">A game site on which you can play some games.</span>
+                    <span><a href="https://gamermash.netlify.app/" target="_blank"
+                            rel="noopener noreferrer">https://gamermash.netlify.app/</a></span>
+                </div>
+            </div>
+            <div class="projects_card"><img src="./project_images/Masher.jpg" alt="">
+                <div class="project_card_info">
+                    <span class="project_card_title">Masher</span>
+                    <span class="project_card_description">A chatting application using Socket Io. In which you can make
+                        chat rooms and chat with your friends.</span>
+                </div>
+            </div>
+            <div class="projects_card"><img src="./project_images/Dowo.png" alt="">
+                <div class="project_card_info">
+                    <span class="project_card_title">Dowo</span>
+                    <span class="project_card_description">Coming Soon...</span>
+                    <!-- <span><a href="https://6072961405337a174add0d9f--gamermash.netlify.app/" target="_blank" rel="noopener noreferrer">Visit</a></span> -->
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div id="check_prev_next_pages_parent">
+
+
+            <div class="check_essays">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+                -1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+                -971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+                161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+                116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+                -1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+                95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+                -77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+                    </g>
+                </svg>
+                <span>Check all essays</span>
+                <?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg
+                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M1037 4780 c-233 -49 -441 -215 -547 -434 -81 -170 -75 -17 -75
+                -1786 0 -1769 -6 -1616 75 -1786 90 -187 257 -339 446 -405 133 -46 174 -49
+                734 -49 l529 0 -17 38 c-20 46 -29 374 -14 503 20 160 -44 86 973 1105 l920
+                920 -4 630 c-4 702 -1 670 -77 830 -78 163 -211 296 -374 374 -167 80 -64 74
+                -1341 77 -1078 2 -1145 1 -1228 -17z m2353 -995 c63 -60 63 -150 0 -210 l-31
+                -30 -1112 -3 c-1088 -2 -1113 -2 -1144 17 -92 57 -94 178 -4 238 l34 23 1113
+                -2 1113 -3 31 -30z m-480 -1120 c63 -60 63 -150 0 -210 l-31 -30 -872 -3
+                c-851 -2 -873 -2 -904 17 -92 57 -94 178 -4 238 l34 23 873 -2 873 -3 31 -30z
+                m-879 -1108 c21 -14 41 -41 53 -70 20 -47 20 -47 0 -94 -12 -29 -32 -56 -53
+                -70 l-34 -23 -431 0 c-410 0 -433 1 -463 20 -92 56 -94 177 -4 237 l34 23 432
+                0 432 0 34 -23z" />
+                        <path d="M4280 2748 c-28 -7 -225 -199 -928 -901 -491 -491 -905 -910 -920
+                -931 -27 -39 -27 -39 -30 -250 -4 -237 1 -259 67 -303 33 -22 42 -23 243 -23
+                157 0 217 3 241 14 42 18 1843 1821 1857 1859 14 40 13 73 -6 110 -20 38 -341
+                366 -393 401 -44 30 -85 37 -131 24z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="check_contact">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="297.000000pt" height="271.000000pt"
+                    viewBox="0 0 297.000000 271.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,271.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M547 2550 c-63 -16 -91 -36 -161 -112 -79 -85 -107 -130 -140 -224
+               -82 -234 -50 -467 101 -739 45 -82 201 -316 223 -335 3 -3 44 -52 91 -110 209
+               -255 462 -476 704 -613 191 -108 512 -230 694 -262 233 -43 447 21 607 181 63
+               62 85 104 113 213 28 111 28 184 1 211 -11 11 -82 50 -158 86 -75 37 -180 87
+               -232 113 -227 110 -242 108 -354 -53 -36 -50 -82 -112 -104 -136 -37 -42 -41
+               -44 -104 -48 -55 -4 -75 0 -137 26 -193 82 -385 212 -532 364 -131 135 -151
+               159 -230 276 -82 119 -103 165 -94 200 7 29 59 97 141 185 30 32 63 75 72 94
+               19 40 23 28 -98 323 -90 221 -142 331 -164 350 -22 17 -182 24 -239 10z" />
+                    </g>
+                </svg>
+                <span>Contact</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" style="rotate: 180deg;">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+-1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+-971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+-1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+-77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+
+        <br><br>
+
+    </div>
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="contact_page" class="pages">
+
+        <div id="contact_intro_bg">
+            <div id="contact_intro">
+                <div>
+                    <?xml version="1.0" standalone="no"?>
+                    <!DOCTYPE svg
+                        PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M2390 5109 c-623 -69 -1147 -535 -1288 -1145 -34 -147 -42 -266 -42
+                    -647 0 -403 3 -430 63 -509 18 -24 56 -56 84 -73 l51 -30 4 -95 c5 -113 26
+                    -168 88 -230 59 -59 118 -83 218 -88 l83 -5 26 -51 c34 -68 76 -129 135 -198
+                    l49 -57 -85 -169 -85 -169 -288 -97 c-378 -128 -491 -188 -675 -364 -249 -239
+                    -400 -535 -453 -887 -8 -55 -15 -128 -15 -162 0 -55 4 -67 29 -95 l29 -33
+                    2236 -3 2236 -2 32 28 c27 25 32 37 36 89 2 32 -3 109 -12 170 -53 358 -203
+                    654 -454 895 -184 176 -297 236 -675 364 l-288 97 -85 169 -85 169 49 57 c126
+                    147 210 324 246 517 9 50 19 100 21 111 5 21 11 22 132 26 104 3 137 8 174 25
+                    60 27 125 92 153 152 20 44 21 62 24 416 2 224 -1 413 -8 480 -35 351 -176
+                    652 -423 904 -324 331 -776 491 -1237 440z m415 -214 c270 -56 481 -170 671
+                    -359 209 -209 333 -461 372 -753 l9 -63 -97 0 -96 0 -13 102 c-43 349 -248
+                    639 -559 793 -160 79 -292 105 -532 105 -240 0 -372 -26 -532 -105 -311 -154
+                    -516 -444 -559 -793 l-13 -102 -97 0 c-87 0 -97 2 -94 18 2 9 9 53 15 97 25
+                    166 95 344 201 506 73 112 240 281 347 352 154 103 354 183 512 206 41 6 86
+                    13 100 15 52 9 288 -3 365 -19z m-13 -389 c147 -29 253 -78 369 -171 180 -145
+                    283 -356 296 -603 l6 -113 -44 7 c-119 17 -295 57 -375 85 -195 68 -407 191
+                    -544 316 -92 83 -108 93 -160 93 -101 0 -279 -44 -374 -92 -83 -42 -173 -106
+                    -235 -169 l-64 -64 6 48 c17 124 91 280 186 395 111 133 293 237 476 271 82
+                    15 374 13 457 -3z m-425 -629 c267 -236 593 -384 977 -441 54 -8 101 -17 103
+                    -20 8 -8 -15 -296 -37 -480 -54 -439 -100 -579 -247 -761 -95 -117 -256 -222
+                    -403 -262 -90 -25 -310 -25 -400 0 -158 43 -324 156 -427 292 -29 38 -53 73
+                    -53 77 0 5 44 8 98 8 l97 -1 30 -51 c37 -65 99 -113 171 -134 85 -24 342 -17
+                    405 13 60 27 125 92 152 152 30 64 30 178 0 242 -27 60 -92 125 -152 152 -63
+                    30 -320 37 -405 13 -72 -21 -134 -69 -171 -134 l-30 -51 -147 -1 c-82 0 -148
+                    3 -148 8 0 4 -7 39 -15 77 -35 170 -79 541 -91 765 l-6 125 79 105 c44 58 110
+                    133 147 167 109 100 262 167 413 182 7 0 34 -18 60 -42z m-903 -404 c3 -27 8
+                    -102 11 -168 4 -66 13 -178 21 -250 7 -71 14 -138 14 -148 0 -17 -8 -19 -95
+                    -15 -88 3 -97 5 -122 31 l-28 27 -3 285 -3 285 100 0 99 0 6 -47z m2394 -238
+                    l-3 -285 -28 -27 c-25 -26 -34 -28 -122 -31 -87 -4 -95 -2 -95 15 0 10 7 77
+                    14 148 8 72 17 186 21 255 3 69 8 144 11 168 l5 42 100 0 100 0 -3 -285z
+                    m-2313 -567 c2 -13 9 -51 15 -86 6 -35 14 -70 17 -79 10 -25 -56 -8 -87 22
+                    -20 21 -25 37 -28 95 l-4 70 41 0 c34 0 41 -4 46 -22z m1082 -210 c41 -42 39
+                    -100 -6 -140 l-33 -30 -134 4 c-128 3 -135 4 -159 29 -37 36 -43 87 -15 122
+                    34 42 53 47 192 44 124 -2 128 -3 155 -29z m559 -769 l66 -132 -27 -75 c-36
+                    -100 -107 -267 -157 -366 l-40 -79 -169 169 -169 169 43 45 c24 25 119 125
+                    211 223 93 97 170 177 172 177 2 0 33 -59 70 -131z m-933 -486 c-86 -90 -158
+                    -163 -160 -163 -9 0 -131 267 -178 389 l-48 123 59 119 58 119 213 -212 212
+                    -211 -156 -164z m318 492 l147 0 -81 -85 c-45 -47 -84 -86 -87 -88 -3 -1 -48
+                    41 -100 93 -91 91 -93 95 -60 88 19 -5 101 -8 181 -8z m-821 -395 c106 -264
+                    249 -527 435 -800 51 -74 115 -172 144 -218 l51 -82 -958 0 -959 0 9 68 c53
+                    399 303 770 643 954 76 41 546 209 573 205 7 -1 35 -58 62 -127z m1924 50
+                    c131 -44 274 -99 319 -122 344 -179 602 -556 655 -960 l9 -68 -959 0 -958 0
+                    51 82 c29 46 93 144 144 218 182 267 314 507 417 760 31 74 58 143 61 153 4 9
+                    10 17 15 17 5 0 115 -36 246 -80z m-937 -312 c101 -101 183 -187 183 -192 0
+                    -5 -48 -81 -107 -168 -60 -88 -138 -208 -176 -266 -37 -59 -72 -107 -77 -107
+                    -5 0 -40 48 -77 107 -38 58 -117 179 -177 267 -59 89 -106 167 -103 174 6 15
+                    337 367 346 367 3 0 88 -82 188 -182z" />
+                            <path d="M3624 1150 c-32 -13 -64 -59 -64 -91 0 -40 46 -88 91 -95 31 -5 42
+                    -1 70 24 28 25 34 37 34 72 0 35 -6 47 -33 71 -33 29 -60 35 -98 19z" />
+                            <path d="M3975 961 c-36 -15 -60 -51 -60 -91 0 -35 9 -47 96 -137 54 -56 114
+                    -130 139 -171 48 -82 83 -107 135 -98 38 7 62 31 74 74 17 58 -70 202 -200
+                    331 -95 95 -131 113 -184 92z" />
+                        </g>
+                    </svg>
+                    <span>Contact Me</span>
+                </div>
+                <span>You can use any of these methods given below or contact me on Social media -</span>
+            </div>
+        </div>
+
+        <div id="aboutme_container">
+
+            <div id="about_note">
+                <img src="./images/k6dab6c757a8784b58531e89cb1334967.jpg" alt="" id="aboutme_img">
+
+                <div>
+                    <span>Hello, Krish Khare here, I live in Jhansi. I am a Web Developer. I am pursuing my B.Tech. in
+                        Computer Science. If you need a website, you can contact me. For further information, go to
+                        contact page.</span>
+                </div>
+
+            </div>
+            <hr style="color: #060606; width: 80%;">
+
+            <div id="skillset">
+                <span id="skillset_intro">Skills</span>
+                <div class="skill_item">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill_item">
+                    <span>CSS</span>
+                </div>
+                <div class="skill_item">
+                    <span>JS</span>
+                </div>
+                <div class="skill_item">
+                    <span>Node Js</span>
+                </div>
+                <div class="skill_item">
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="contact_container">
+            <div class="contact_items">
+                <?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg
+                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2385 5109 c-559 -58 -1049 -402 -1308 -915 -43 -86 -111 -283 -131
+-384 -74 -364 -26 -736 135 -1064 24 -49 341 -553 704 -1120 490 -765 669
+-1037 694 -1053 46 -31 116 -31 162 0 24 16 206 291 691 1047 362 564 680
+1070 707 1125 188 383 221 827 90 1228 -84 257 -215 471 -405 661 -355 355
+-840 527 -1339 475z m360 -912 c269 -75 478 -288 546 -557 8 -31 14 -105 14
+-170 0 -123 -12 -188 -53 -285 -93 -219 -290 -387 -522 -446 -71 -18 -269 -18
+-340 0 -232 59 -429 227 -522 446 -41 97 -53 162 -53 285 0 123 12 188 53 285
+93 220 305 400 522 444 30 6 64 13 75 15 37 9 229 -3 280 -17z" />
+                        <path d="M1244 1635 c-728 -203 -1062 -553 -886 -928 32 -70 124 -174 212
+-242 291 -223 840 -384 1525 -447 183 -17 747 -17 930 0 685 63 1234 224 1525
+447 88 68 180 172 212 242 177 378 -171 736 -906 933 -98 26 -121 29 -131 18
+-7 -7 -175 -269 -375 -583 -200 -314 -381 -592 -402 -620 -194 -251 -592 -250
+-779 2 -20 26 -204 310 -409 631 -204 320 -377 582 -384 581 -6 0 -66 -16
+-132 -34z" />
+                    </g>
+                </svg>
+                <span>Jhansi, Uttar Pradesh, India</span>
+            </div>
+            <div class="contact_items">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="297.000000pt" height="271.000000pt"
+                    viewBox="0 0 297.000000 271.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,271.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M547 2550 c-63 -16 -91 -36 -161 -112 -79 -85 -107 -130 -140 -224
+           -82 -234 -50 -467 101 -739 45 -82 201 -316 223 -335 3 -3 44 -52 91 -110 209
+           -255 462 -476 704 -613 191 -108 512 -230 694 -262 233 -43 447 21 607 181 63
+           62 85 104 113 213 28 111 28 184 1 211 -11 11 -82 50 -158 86 -75 37 -180 87
+           -232 113 -227 110 -242 108 -354 -53 -36 -50 -82 -112 -104 -136 -37 -42 -41
+           -44 -104 -48 -55 -4 -75 0 -137 26 -193 82 -385 212 -532 364 -131 135 -151
+           159 -230 276 -82 119 -103 165 -94 200 7 29 59 97 141 185 30 32 63 75 72 94
+           19 40 23 28 -98 323 -90 221 -142 331 -164 350 -22 17 -182 24 -239 10z" />
+                    </g>
+                </svg>
+                <span><a href="tel:+8081998420">Call</a></span>
+            </div>
+            <div class="contact_items">
+                <?xml version="1.0" standalone="no"?>
+                <!DOCTYPE svg
+                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M366 4464 c-255 -62 -415 -322 -351 -569 20 -75 57 -143 107 -195 45
+-46 2175 -1471 2253 -1506 119 -54 260 -52 382 5 95 45 2182 1442 2235 1496
+249 254 113 686 -243 770 -94 22 -4291 21 -4383 -1z" />
+                        <path d="M0 2236 c0 -810 3 -1181 11 -1218 37 -176 179 -320 360 -363 94 -22
+4267 -22 4372 0 182 38 329 184 366 363 13 61 16 2386 3 2380 -4 -1 -487 -323
+-1074 -715 -587 -392 -1099 -729 -1139 -748 -110 -56 -204 -77 -339 -77 -135
+0 -229 21 -339 77 -40 19 -552 356 -1139 748 -587 392 -1070 714 -1074 715 -5
+2 -8 -521 -8 -1162z" />
+                    </g>
+                </svg>
+                <span><a href="mailto:kharekrish049@gmail.com">kharekrish049@gmail.com</a></span>
+            </div>
+            <div class="contact_items">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                    style="filter: invert(43%) sepia(81%) saturate(6522%) hue-rotate(205deg) brightness(107%) contrast(102%)">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M395 5110 c-176 -28 -312 -145 -371 -320 -18 -53 -19 -130 -19 -2230
+0 -2100 1 -2177 19 -2230 49 -146 148 -247 294 -303 l57 -22 2185 0 2185 0 57
+22 c146 56 245 157 294 303 18 53 19 130 19 2230 0 2100 -1 2177 -19 2230 -49
+146 -148 247 -294 303 l-57 22 -2150 1 c-1182 1 -2172 -2 -2200 -6z m880 -565
+c207 -44 382 -218 424 -423 78 -376 -262 -724 -634 -649 -200 41 -355 175
+-421 366 -31 89 -35 228 -9 318 42 148 150 276 289 343 124 60 222 72 351 45z
+m2625 -1298 c169 -44 276 -104 383 -215 166 -170 253 -399 288 -757 9 -91 13
+-353 14 -875 0 -702 -1 -747 -18 -773 -10 -16 -32 -37 -50 -47 -30 -19 -53
+-20 -365 -20 -363 0 -370 1 -411 58 -19 28 -20 46 -24 763 -3 623 -6 744 -19
+799 -38 154 -98 254 -188 308 -78 46 -121 57 -235 56 -131 0 -192 -23 -279
+-105 -72 -67 -123 -159 -159 -287 -21 -75 -22 -97 -27 -792 -5 -668 -6 -717
+-23 -742 -38 -55 -56 -58 -404 -58 -356 0 -368 2 -405 71 -17 32 -18 92 -18
+1267 0 1368 -4 1281 64 1323 29 18 56 19 361 19 310 0 332 -1 362 -20 52 -31
+63 -64 63 -192 l1 -113 22 30 c74 102 202 206 309 253 141 61 271 82 488 78
+147 -3 190 -8 270 -29z m-2379 -30 c19 -12 42 -38 52 -57 16 -33 17 -109 15
+-1272 -3 -1233 -3 -1237 -24 -1265 -45 -61 -58 -63 -402 -63 -338 0 -341 0
+-392 55 l-25 27 -3 1250 c-2 1206 -2 1252 16 1280 11 16 32 38 48 49 27 18 51
+19 355 19 322 0 326 0 360 -23z" />
+                    </g>
+                </svg>
+                <span><a href="https://www.linkedin.com/in/krish-khare-8b1a8b274/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></span>
+            </div>
+            <div class="contact_items">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="48.000000pt" height="48.000000pt"
+                    viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet"
+                    style="filter: invert(28%) sepia(86%) saturate(4198%) hue-rotate(311deg) brightness(101%) contrast(104%);">
+
+                    <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M108 414 c-46 -24 -58 -61 -58 -174 0 -165 25 -190 190 -190 165 0
+               190 25 190 190 0 166 -25 190 -192 190 -71 -1 -111 -5 -130 -16z m263 -43 c28
+               -29 29 -32 29 -131 0 -99 -1 -102 -29 -131 -29 -28 -32 -29 -131 -29 -99 0
+               -102 1 -131 29 -28 29 -29 32 -29 131 0 99 1 102 29 131 29 28 32 29 131 29
+               99 0 102 -1 131 -29z" />
+                        <path d="M324 349 c-10 -17 13 -36 27 -22 12 12 4 33 -11 33 -5 0 -12 -5 -16
+               -11z" />
+                        <path d="M191 326 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124
+               -149 87z m96 -38 c29 -27 29 -65 1 -95 -27 -29 -65 -29 -95 -1 -29 27 -29 65
+               -1 95 27 29 65 29 95 1z" />
+                    </g>
+                </svg>
+                <span><a href="https://www.instagram.com/_krishkhare/" target="_blank"
+                        rel="noopener noreferrer">Instagram</a></span>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div id="check_prev_next_pages_parent">
+
+
+            <div class="check_projects">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+                -1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+                -971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+                161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+                116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+                -1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+                95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+                -77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+                    </g>
+                </svg>
+                <span>Check all projects</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M4515 5109 c-148 -14 -334 -46 -470 -80 -66 -17 -130 -34 -142 -36
+    -27 -6 -28 -11 -7 -111 56 -276 251 -567 514 -766 138 -105 384 -210 536 -230
+    l52 -6 20 77 c70 262 96 471 96 784 l1 255 -27 41 c-44 67 -75 76 -288 79
+    -102 1 -230 -2 -285 -7z" />
+                        <path d="M3500 4841 c-687 -309 -1320 -839 -1897 -1591 -146 -191 -453 -648
+    -453 -676 0 -5 75 -84 166 -175 l166 -166 92 30 c109 35 287 48 377 27 219
+    -52 349 -224 349 -462 0 -94 -18 -200 -49 -291 l-19 -54 173 -173 c111 -111
+    178 -171 187 -167 29 11 390 248 525 343 240 172 501 386 698 574 483 459 823
+    925 1036 1415 l48 110 -107 26 c-389 97 -730 340 -963 688 -111 165 -187 336
+    -224 504 -9 42 -18 77 -19 77 0 0 -39 -18 -86 -39z m-13 -822 c263 -70 465
+    -273 534 -537 26 -97 28 -258 5 -357 -9 -38 -38 -113 -63 -165 -40 -80 -61
+    -109 -138 -185 -103 -103 -168 -145 -292 -187 -161 -56 -367 -48 -527 19 -229
+    95 -405 315 -447 557 -16 96 -7 263 21 351 120 385 520 608 907 504z" />
+                        <path d="M3226 3739 c-214 -32 -376 -223 -376 -443 0 -248 199 -446 450 -446
+    190 0 373 136 425 317 19 66 22 181 5 243 -59 220 -277 363 -504 329z" />
+                        <path d="M1055 3461 c-141 -35 -280 -99 -410 -189 -52 -36 -176 -151 -357
+    -331 -255 -255 -277 -279 -283 -318 -8 -53 7 -102 43 -137 46 -44 82 -48 191
+    -25 53 11 132 27 176 35 84 15 272 21 315 9 24 -6 30 2 100 122 143 246 303
+    490 463 706 54 74 77 111 70 118 -32 32 -197 37 -308 10z" />
+                        <path d="M897 2132 c-112 -214 -167 -331 -167 -360 0 -35 24 -84 56 -114 l29
+    -27 70 82 c39 45 129 142 202 217 l132 136 -117 117 -117 116 -88 -167z" />
+                        <path d="M1730 1995 c-47 -9 -110 -31 -170 -61 -87 -43 -106 -57 -230 -183
+    -372 -377 -730 -868 -730 -1002 0 -133 116 -187 253 -118 142 72 372 232 552
+    384 147 124 422 384 462 437 106 138 161 322 129 431 -31 106 -112 141 -266
+    112z" />
+                        <path d="M3370 1299 c-110 -84 -516 -352 -695 -458 l-169 -101 -1 -122 c0 -71
+    -11 -195 -24 -293 -28 -200 -25 -234 25 -282 40 -38 91 -50 143 -35 50 15 566
+    534 633 637 127 194 189 377 190 555 0 89 -12 151 -29 149 -5 0 -37 -23 -73
+    -50z" />
+                        <path d="M1975 1130 c-50 -50 -147 -141 -217 -203 l-127 -112 32 -34 c37 -39
+    83 -61 127 -61 28 0 282 124 467 227 l52 29 -122 122 -122 122 -90 -90z" />
+                    </g>
+                </svg>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+    </div>
+
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+    <!-- </div> -->
+
+    <footer>
+        <div id="copyright">
+            <span>&#169; Copyright. All rights reserved</span><br>
+        </div>
+        <div id="developed_by">
+            <span>...developed by Krish Khare</span>
+        </div>
+    </footer>
+
+</body>
+
+<!-- <script src="./libraries/js/swiper-bundle.min.js"></script> -->
+<script src="./index.js"></script>
+<script src="./libraries/js/navigo.min.js"></script>
+<script src="./router.js"></script>
+
+</html>

@@ -1,0 +1,713 @@
+ 
+
+/* For phones- */
+@media (max-width:360px){
+
+    body{
+        /* CSS reset */
+        margin: 0%;
+        padding: 0%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 7px;
+        color: white;
+        /* background-color: #f6feff; */
+        background: url('/Images/des.jpg') no-repeat center center/cover;
+        /* height: 2000px; */
+        /* New height (temporary) */
+        height: 1240px;
+    
+    }
+
+
+
+    #logo{
+        position: fixed;
+        /* border-radius: 30px; */
+        border: 4px solid black;
+        background-color: white;
+        color:#00b5ff;
+        top: -18px;
+        left:-17px;
+        font-size: 20px;
+        width: 100%;
+        margin: 13px 10px;
+        padding: 5px 10px;
+        z-index: 5;
+        text-align: center;
+    }
+
+    /* logos animation- */
+    .ball{
+        position: fixed;
+        width: 44px;
+        top: 17px;
+        z-index: 5;
+    }
+
+    #red{
+        position: fixed;
+        left: -16px;
+        animation: logosred ease-out 1s infinite;
+    }
+
+    @keyframes logosred {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 2px;
+        }
+
+        
+    }
+
+
+    #green{
+        position: fixed;
+        left: -5px;
+        animation: logosgreen ease-in 1.5s 1s infinite;
+    }
+
+    @keyframes logosgreen {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 2px;
+        }
+
+        
+    }
+
+    #blue{
+        position: fixed;
+        left: 7.1px;
+        animation: logosblue ease-out  2.5s 1s infinite;
+    }
+
+    @keyframes logosblue {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 2px;
+        }
+
+        
+    }
+    
+
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+
+    #contentpara{
+        position: absolute;
+        top: 107px;
+        /* left: 20px; */
+        font-size: 8px;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 5px;
+    }
+    /* Essays- */
+
+    #ehead{
+        position: absolute;
+        top: 199px;
+        left: 15px;
+        color: black;
+        font-size: 14px;
+        text-decoration: underline;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 5px;
+    }
+
+    
+    .essay a{
+        color: rgb(0, 195, 255);
+        /* z-index: 5; */
+        position: absolute;
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 40px;
+        padding: 2px 6px;
+        font-size: 9px;
+        /* left: 2px; */
+    }
+
+    .essay a:hover{
+        color: white;
+        background-color: rgb(0, 195, 255);
+    }
+
+    #Gandhi{
+        /* color: black; */
+        top: 251px;
+        width: 113px;
+    }
+
+    #PM{
+        top: 305px;
+        width: 78px;
+    }
+
+    #Book{
+        top: 359px;
+    }
+
+    #Science{
+        top: 391px;
+    }
+
+    #Gamelike{
+        top: 423px;
+    }
+
+    #Election{
+        top: 455px;
+    }
+
+    #Histbuild{
+        top: 487px;
+    }
+
+    #Zoo{
+        top: 519px;
+    }
+
+    #Natfest{
+        top: 550px;
+    }
+
+    #Afforestation{
+        top: 581px;
+    }
+
+    #Sports{
+        top: 613px;
+    }
+
+    #Leader{
+        top: 645px;
+    }
+
+    #Yoga{
+        top: 677px;
+    }
+
+    #Money{
+        top: 708px;
+    }    
+
+    #sell{
+        position: absolute;
+        top: 810px;
+        left: 0%;
+        font-size: 16px;
+        color: black;
+        border: 5px solid black;
+        background-color: white;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        /* width: 200px; */
+        /* height:auto ; */
+    }
+
+    #sell a{
+        text-decoration: underline;
+        color: rgb(0, 195, 255);
+    }
+
+    #sell a:hover{
+        color: tomato;
+    }
+
+
+
+} 
+
+
+@media (min-width:360px) and (max-width:600px){
+
+    body{
+        /* CSS reset */
+        margin: 0%;
+        padding: 0%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: white;
+        /* background-color: #f6feff; */
+        background: url('/Images/des.jpg') no-repeat center center/cover;
+        /* height: 2000px; */
+        /* New height (temporary) */
+        height: 1600px;
+    
+    }
+
+
+
+    #logo{
+        position: fixed;
+        /* border-radius: 30px; */
+        border: 4px solid black;
+        background-color: white;
+        color:#00b5ff;
+        top: -18px;
+        left:-17px;
+        font-size: 28px;
+        width: 100%;
+        margin: 13px 10px;
+        padding: 6px 10px;
+        z-index: 5;
+        text-align: center;
+
+    }
+
+    /* logos animation- */
+    .ball{
+        position: fixed;
+        width: 79px;
+        top: 16px;
+        z-index: 5;
+    }
+
+    #red{
+        position: fixed;
+        left: -22px;
+        animation: logosred ease-out 1s infinite;
+    }
+
+    @keyframes logosred {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+
+    #green{
+        position: fixed;
+        left: -2.9px;
+        animation: logosgreen ease-in 1.5s 1s infinite;
+    }
+
+    @keyframes logosgreen {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+    #blue{
+        position: fixed;
+        left: 19px;
+        animation: logosblue ease-out  2.5s 1s infinite;
+    }
+
+    @keyframes logosblue {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+
+    #contentpara{
+        position: absolute;
+        top: 138px;
+        /* left: 20px; */
+        font-size: 10px;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 10px;
+    }
+    /* Essays- */
+
+    #ehead{
+        position: absolute;
+        top: 260px;
+        left: 20px;
+        color: black;
+        font-size: 15px;
+        text-decoration: underline;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 5px;
+    }
+
+    
+    .essay a{
+        color: rgb(0, 195, 255);
+        /* z-index: 5; */
+        position: absolute;
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 40px;
+        padding: 2px 10px;
+        font-size: 15px;
+        left: 2px;
+    }
+
+    .essay a:hover{
+        color: white;
+        background-color: rgb(0, 195, 255);
+    }
+
+    #Gandhi{
+        /* color: black; */
+        top: 321px;
+        width: 232px;
+    }    
+
+    #PM{
+        top: 391px;
+        width: 155px;
+    }
+
+    #Book{
+        top: 463px;
+    }
+
+    #Science{
+        top: 515px;
+    }
+
+    #Gamelike{
+        top: 564px;
+    }
+
+    #Election{
+        top: 609px;
+    }
+
+    #Histbuild{
+        top: 660px;
+    }
+
+    #Zoo{
+        top: 710px;
+    }
+
+    #Natfest{
+        top: 760px;
+    }
+
+    #Afforestation{
+        top: 808px;
+    }
+
+    #Sports{
+        top: 857px;
+    }
+
+    #Leader{
+        top: 912px;
+    }
+
+    #Yoga{
+        top: 963px;
+    }
+
+    #Money{
+        top: 1012px;
+    }
+
+    #sell{
+        position: absolute;
+        top: 1150px;
+        left: 0%;
+        font-size: 18px;
+        color: black;
+        border: 5px solid black;
+        background-color: white;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        /* width: 200px; */
+        /* height:auto ; */
+    }
+
+    #sell a{
+        text-decoration: underline;
+        color: rgb(0, 195, 255);
+    }
+
+    #sell a:hover{
+        color: tomato;
+    }
+}
+
+/* For pc and laptops- */
+@media (min-width:600px){
+
+    body{
+        /* CSS reset */
+        margin: 0%;
+        padding: 0%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        color: white;
+        /* background-color: #f6feff; */
+        background: url('/Images/des.jpg') no-repeat center center/cover;
+        /* height: 2000px; */
+        /* New height (temporary) */
+        height: 1800px;
+    
+    }
+
+
+    #logo{
+        position: fixed;
+        /* border-radius: 30px; */
+        border: 4px solid black;
+        background-color: white;
+        color:#00b5ff;
+        top: -18px;
+        left:-17px;
+        font-size: 40px;
+        width: 100%;
+        margin: 13px 10px;
+        padding: 15px 10px;
+        z-index: 5;
+        text-align: center;
+    }
+
+    /* logos animation- */
+    .ball{
+        position: fixed;
+        width: 180px;
+        top: 24px;
+        z-index: 5;
+    }
+
+    #red{
+        position: fixed;
+        left: -41px;
+        animation: logosred ease-out 1s infinite;
+    }
+
+    @keyframes logosred {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+
+    #green{
+        position: fixed;
+        left: -0.9px;
+        animation: logosgreen ease-in 1.5s 1s infinite;
+    }
+
+    @keyframes logosgreen {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+    #blue{
+        position: fixed;
+        left: 41px;
+        animation: logosblue ease-out  2.5s 1s infinite;
+    }
+
+    @keyframes logosblue {
+        0%{
+            top: 0px;
+        }
+
+        25%{
+            top: 3px;
+        }
+
+        
+    }
+
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+ 
+
+    #contentpara{
+        position: absolute;
+        top: 177px;
+        /* left: 20px; */
+        font-size: 15px;
+        color: black;
+        background-color: white;
+        border: 4px solid black;
+        border-radius: 30px;
+        padding: 15px;
+    }
+    /* Essays- */
+
+    #ehead{
+        position: absolute;
+        top: 260px;
+        left: 20px;
+        color: black;
+        font-size: 22px;
+        text-decoration: underline;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 5px;
+    }
+
+    
+    .essay a{
+        color: rgb(0, 195, 255);
+        /* z-index: 5; */
+        position: absolute;
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 40px;
+        padding: 2px 10px;
+        font-size: 13px;
+        left: 2px;
+    }
+
+    .essay a:hover{
+        color: white;
+        background-color: rgb(0, 195, 255);
+    }
+
+    #Gandhi{
+        /* color: black; */
+        top: 321px;
+        width: 253px;
+    }
+
+    #PM{
+        top: 400px;
+        width: 154px;
+    }
+
+    #Book{
+        top: 460px;
+    }
+
+    #Science{
+        top: 502px;
+    }
+
+    #Gamelike{
+        top: 544px;
+    }
+
+    #Election{
+        top: 586px;
+    }
+
+    #Histbuild{
+        top: 626px;
+    }
+
+    #Zoo{
+        top: 668px;
+    }
+
+    #Natfest{
+        top: 709px;
+    }
+
+    #Afforestation{
+        top: 751px;
+    }
+
+    #Sports{
+        top: 793px;
+    }
+
+    #Leader{
+        top: 836px;
+    }
+
+    #Yoga{
+        top: 880px;
+    }
+
+    #Money{
+        top: 922px;
+    }
+
+    #sell{
+        position: absolute;
+        top: 1045px;
+        left: -2%;
+        font-size: 16px;
+        color: black;
+        border: 5px solid black;
+        background-color: white;
+        margin: 10px 10px 10px 0px;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        /* height:auto ; */
+    }
+
+    #sell a{
+        text-decoration: underline;
+        color: rgb(0, 195, 255);
+    }
+
+    #sell a:hover{
+        color: tomato;
+    }
+}
+    

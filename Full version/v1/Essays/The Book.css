@@ -1,0 +1,61 @@
+/* For min-width:200px */
+@media (max-width:500px){
+    body{
+        height: 1000px;
+        /* font-family: cursive; */
+        font-weight: 100;
+        }
+        
+    header{
+        font-size: 8px;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        text-align: center;
+        width: 99%;
+        border: 2px solid black;
+        background-color: rgb(255, 255, 255);
+        z-index: 5;
+        opacity: 1;
+    }
+    
+    p{
+        position: absolute;
+        padding: 170px 5px;
+        top: 100px;
+        z-index: 2;
+        font-size: 14px;
+    }
+    
+    }
+    
+    /* For pc and laptops- */
+    @media (min-width:500px){
+    body{
+        height: 1000px;
+        /* font-family: cursive; */
+        font-weight: 100;
+        }
+        
+    header{
+        font-size: 14px;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        text-align: center;
+        width: 100%;
+        border: 2px solid black;
+        background-color: rgb(255, 255, 255);
+        z-index: 5;
+        opacity: 1;
+    }
+    
+    p{
+        position: absolute;
+        padding: 170px 5px;
+        top: 100px;
+        z-index: 2;
+        font-size: 20px;
+    }
+    
+    }
